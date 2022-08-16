@@ -13,7 +13,13 @@
 Este algoritmo gera um array aleatório de 50 posições e utiliza diferentes tipos de Sort para ordenar os elementos. Seguindo o conteúdo, é utilizado o MergeSort e para fins de comparção de quantidade de operações e tempo é utilizado o BubbleSort, InsertionSort e QuickSort. 
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+<table>
+    <tr>
+        <td><img src="/assets/01.png" width="300"></td>
+        <td><img src="/assets/02.png" width="300"></td>
+      <td><img src="/assets/03.png" width="300"></td>
+    </tr>
+</table>
 
 ## Instalação 
 **Linguagem**: Python<br>
