@@ -1,4 +1,3 @@
-import numpy
 from matplotlib.pylab import *
 import matplotlib.animation as animation
 import random
@@ -14,8 +13,6 @@ def insertionsort(a):
             a[i+1] = a[i]
             i -= 1
   
-            # yield the current position
-            # of elements in a
             yield a
         a[i+1] = key
         yield a
@@ -99,7 +96,7 @@ D = A.copy()
 
 # Setup figure and subplots
 f0 = subplots(figsize = (12, 8))
-# f0.suptitle("Comparador de Ordenadores", fontsize=12)
+
 ax01 = subplot(4, 1, 1)
 ax01.set_title('BubbleSort')
 ax01.set_xlim(0, N)
@@ -144,44 +141,46 @@ def update(arr, rects, iteration, text):
 
 st = time.time()
 
-anim = animation.FuncAnimation(
+animSpeed = 20
+
+a1 = animation.FuncAnimation(
     f0[0],
     func=update,
     fargs=(bars1, n01, text01),
     frames=bubblesort(A),
     repeat=False,
     blit=False,
-    interval=80,
+    interval=animSpeed,
 )
 
-asd = animation.FuncAnimation(
+a2 = animation.FuncAnimation(
     f0[0],
     func=update,
     fargs=(bars2, n02, text02),
     frames=mergesort(B, 0, N-1),
     repeat=False,
     blit=False,
-    interval=80,
+    interval=animSpeed,
 )
 
-qwe = animation.FuncAnimation(
+a3 = animation.FuncAnimation(
     f0[0],
     func=update,
     fargs=(bars3, n03, text03),
     frames=quicksort(C, 0, N-1),
     repeat=False,
     blit=False,
-    interval=80,
+    interval=animSpeed,
 )
 
-wer = animation.FuncAnimation(
+a4 = animation.FuncAnimation(
     f0[0],
     func=update,
     fargs=(bars4, n04, text04),
     frames=insertionsort(D),
     repeat=False,
     blit=False,
-    interval=80,
+    interval=animSpeed,
 )
 
 plt.show()
